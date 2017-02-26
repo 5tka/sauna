@@ -1,0 +1,15 @@
+@mixin container($maxwidth, $minwidth, $padding: 15) {
+    max-width: $maxwidth + ($padding * 2) + px;
+    min-width: $minwidth + px ;
+    margin: 0 auto;
+    padding:  {
+        right: $padding + px;
+        left: $padding + px;
+    }
+}
+.fl-l{
+    float: left;    
+}
+.fl-r{
+    float: right;
+}
