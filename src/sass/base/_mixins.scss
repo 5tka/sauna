@@ -8,9 +8,20 @@
         clear: both;
     }
 }
-@mixin inlineblock {
-    display: inline-block;
-    vertical-align: top;
+
+@mixin container() {
+    max-width: $maxwidth-container + ($padding-container * 2) + px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding:  {
+        right: $padding-container + px;
+        left: $padding-container + px;
+    }
+}
+@mixin fz($px){
+  $maxwidth: ($maxwidth-container * 0.01) * 1px;
+  font-size: $px;
+  font-size: ($px / $maxwidth) * 1vw;
 }
 
 @mixin border-radius($radius: 5px) {
@@ -57,17 +68,6 @@
         color: $color;
     }
 }
-
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-    font-size: $size;
-    font-size: calculateRem($size);
-}
-
 @mixin transform($transforms) {
        -moz-transform: $transforms;
          -o-transform: $transforms;
@@ -83,9 +83,8 @@
     -webkit-transform-origin: $origin;
             transform-origin: $origin;
 }
-
 @mixin breakpoint($width) {
-    @media only screen and (max-width: ($width / 16) + em) {
+    @media only screen and (max-width: ($width / 16) + px) {
         @content;
     }
 }

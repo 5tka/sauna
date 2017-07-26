@@ -17,6 +17,17 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'), // іморт файлів в файл like //="../../../bower_components/...
     gcmq = require('gulp-group-css-media-queries'), // обєднує media з однаковими breakpoint
     zip = require('gulp-zip'); // обєднує media з однаковими breakpoint
+    coffee = require('gulp-coffee'); // .coffee -> .js
+    criticalCss = require('gulp-penthouse');
+
+
+// var bemjson = require('gulp-bemjson');
+// gulp.task('bem', function () {
+// 	return gulp.src('src/index.bemjson.js', { read: false })
+// 		.pipe(bemjson())
+// 		.pipe(gulp.dest('dist'));
+// });
+
 
 var path = {
     name: "boiler",
@@ -43,6 +54,7 @@ var path = {
         pug: './src/pug/**/*.pug',
         pugIncludes: './src/pug/_includes/**/*.pug',
         js: './src/js/*.js',
+        jsCoffee: './src/js/*.coffee',
         jsVendor: './src/js/vendor/*.js',
         scss: ['./src/sass/**/*.scss','./src/sass/_*.scss', './src/sass/**/*.sass','./src/sass/_*.sass'],
         img: './src/img/**/*',
@@ -50,24 +62,6 @@ var path = {
         fonts: './src/fonts/*'
     }
 };
-
-// робимо архів нашого білда
-gulp.task('zip', () => {
-    return gulp.src([path.build.server+'**/*','!'+path.build.server+'**/*.zip'])
-        .pipe(zip('build_'+path.name+'.zip'))
-        .pipe(gulp.dest(path.build.server));
-});
-// очищаемо від невикористовуваних стилів
-gulp.task('uncss', function() {
-  return gulp.src('build/css/styles.css')
-    .pipe(uncss({
-      html: ['build/*.html']
-    }))
-    .pipe(gcmq())
-    .pipe(shorthand())
-    .pipe(rename('main.css'))
-    .pipe(gulp.dest(path.build.css));
-});
 //Собираем Pug ( html )
 gulp.task('pug-includes', function() {
   return gulp.src(path.src.pug)
@@ -101,7 +95,6 @@ gulp.task('sass-dev', function() {
       errLogToConsole: true,
       sourcemaps : false
       }))
-    // .pipe(gcmq())
     .on('error', sass.logError)
     .pipe(autoprefixer({
       browsers: ['last 15 versions'],
@@ -115,6 +108,35 @@ gulp.task('sass-dev', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream());
+});
+// очищаемо від невикористовуваних стилів
+gulp.task('uncss', function() {
+  return gulp.src('build/css/styles.css')
+    .pipe(uncss({
+      html: ['build/*.html']
+    }))
+    .pipe(rename('main.css'))
+    .pipe(gulp.dest(path.build.css));
+});
+  // ств. файл критичний стил1в
+gulp.task('critical-css', function () {
+    return gulp.src('build/css/main.css')
+      .pipe(criticalCss({
+          out: 'critical.css',
+          url: 'http://localhost:3000',
+          width: 1300,
+          height: 900,
+          strict: true,
+          userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+      }))
+      .pipe(gcmq())
+      .pipe(shorthand())
+      .pipe(cssnano({
+          discardComments: {
+            removeAll: true
+          }
+      }))
+      .pipe(gulp.dest(path.build.css));
 });
 //Сжатие изображений
 gulp.task('img', function() {
@@ -131,6 +153,17 @@ gulp.task('js', function(){
   .pipe(concat('script.js'))
   .pipe(gulp.dest(path.build.js))
   .pipe(browserSync.stream());
+});
+// кофе файл в джс
+gulp.task('coffee', function() {
+  gulp.src('src/js/*.coffee')
+    .pipe(coffee({bare: true}))
+    .pipe(plumber())
+    .pipe(rigger())
+    .pipe(uglify())
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest(path.build.js))
+    .pipe(browserSync.stream());
 });
 //Копируем JS-vendor
 gulp.task('js-vendor', function(){
@@ -158,9 +191,14 @@ gulp.task('fonts', function(){
   .pipe(gulp.dest(path.build.fonts))
   .pipe(browserSync.stream());
 });
-
+// робимо архів нашого білда
+gulp.task('zip', () => {
+    return gulp.src([path.build.server+'**/*','!'+path.build.server+'**/*.zip'])
+        .pipe(zip('build_'+path.name+'.zip'))
+        .pipe(gulp.dest(path.build.server));
+});
 // WATCH
-gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
+gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon','fonts','coffee'], function () {
 
     browserSync.init({
       server : path.build.server
@@ -171,7 +209,6 @@ gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon'
 
     watch(path.watch.pug, function() {
       gulp.start('pug-templates');
-      // gulp.start('uncss');
     });
 
     watch(path.watch.scss, function() {
@@ -180,6 +217,9 @@ gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon'
 
     watch(path.watch.js, function() {
       gulp.start('js');
+    });
+    watch(path.watch.jsCoffee, function() {
+      gulp.start('coffee');
     });
 
     watch(path.watch.jsVendor, function() {
