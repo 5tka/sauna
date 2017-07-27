@@ -7,3 +7,8 @@
 .fl-r{
     float: right;
 }
+
+.title{
+    color: #010101;
+    @include fz(34px);
+}
