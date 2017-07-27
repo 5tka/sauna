@@ -24,7 +24,7 @@
     "gulp-shorthand": "latest",
     "gulp-uncss": "latest",
     "gulp-watch": "latest",
-    "gulp-zip": "^3.2.0",
+    "gulp-zip": "^3.2.0"
   },
   "dependencies": {
     "browser-sync": "latest",

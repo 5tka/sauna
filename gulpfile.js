@@ -17,7 +17,6 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'), // іморт файлів в файл like //="../../../bower_components/...
     gcmq = require('gulp-group-css-media-queries'), // обєднує media з однаковими breakpoint
     zip = require('gulp-zip'); // обєднує media з однаковими breakpoint
-    coffee = require('gulp-coffee'); // .coffee -> .js
     criticalCss = require('gulp-penthouse');
 
 var path = {
@@ -145,17 +144,6 @@ gulp.task('js', function(){
   .pipe(gulp.dest(path.build.js))
   .pipe(browserSync.stream());
 });
-// кофе файл в джс
-gulp.task('coffee', function() {
-  gulp.src('src/js/*.coffee')
-    .pipe(coffee({bare: true}))
-    .pipe(plumber())
-    .pipe(rigger())
-    .pipe(uglify())
-    .pipe(concat('script.js'))
-    .pipe(gulp.dest(path.build.js))
-    .pipe(browserSync.stream());
-});
 //Копируем JS-vendor
 gulp.task('js-vendor', function(){
   return gulp.src(path.src.jsVendor)
@@ -189,7 +177,7 @@ gulp.task('zip', () => {
         .pipe(gulp.dest(path.build.server));
 });
 // WATCH
-gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon','fonts','coffee'], function () {
+gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
 
     browserSync.init({
       server : path.build.server
@@ -208,9 +196,6 @@ gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon'
 
     watch(path.watch.js, function() {
       gulp.start('js');
-    });
-    watch(path.watch.jsCoffee, function() {
-      gulp.start('coffee');
     });
 
     watch(path.watch.jsVendor, function() {
