@@ -20,15 +20,6 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'); // .coffee -> .js
     criticalCss = require('gulp-penthouse');
 
-
-// var bemjson = require('gulp-bemjson');
-// gulp.task('bem', function () {
-// 	return gulp.src('src/index.bemjson.js', { read: false })
-// 		.pipe(bemjson())
-// 		.pipe(gulp.dest('dist'));
-// });
-
-
 var path = {
     name: "boiler",
     build: { //Тут мы укажем куда складывать готовые после сборки файлы

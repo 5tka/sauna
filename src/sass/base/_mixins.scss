@@ -8,7 +8,6 @@
         clear: both;
     }
 }
-
 @mixin container() {
     max-width: $maxwidth-container + ($padding-container * 2) + px;
     min-width: 320px;
