@@ -17,7 +17,11 @@
     "bPopup": "bpopup#latest",
     "jquery": "1.12.0",
     "normalize-css": "latest",
-    "owl.carousel": "latest"
+    "mixitup": "^3.2.1",
+    "bxslider": "*",
+    "jQuery": "^3.2.1",
+    "slick-carousel": "https://github.com/kenwheeler/slick.git#^1.8.0",
+    "spritespin": "^3.4.3"
   },
   "devDependencies": {
     "bxslider-4": "^4.2.5",

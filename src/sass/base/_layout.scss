@@ -1,6 +1,10 @@
 .container{
   @include container();
 }
+.container-sm{
+    @extend .container;
+    max-width: 1150px;
+}
 .fl-l{
     float: left;    
 }
@@ -9,6 +13,9 @@
 }
 
 .title{
-    color: #010101;
-    @include fz(34px);
+    font-family: 'Noto Serif', serif;
+    color: #2d2d2d;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
 }

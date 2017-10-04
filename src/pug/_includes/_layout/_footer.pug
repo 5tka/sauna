@@ -1,3 +1,33 @@
 footer.footer
-    h2 footer
-    
+    .container
+        .footer-wrapper
+            h2.title
+                | Как нас найти?    
+    .footer-container
+        .f-left
+            .f-l-content
+                .adress-wrap    
+                    a(href="tel:+74955054869").tel
+                        | +7 (495) 505 48 69
+                    a(href="mailto:mail@banyaplus.ru").mail
+                        | mail@banyaplus.ru
+                    p.
+                        MO, Красногорский р-н, Новорижское шоссе, <br>
+                        9 км от МКАД, ТЦ Строительный двор <br>
+                        «Петровский», пав В-43
+                .form-wrap
+                    p
+                        span Остались вопросы? 
+                        | Заполните форму <br>
+                        | и получите ответ дизайнера-архитектора!
+                    form(action="/").form
+                        label(for="text")
+                            input(type="text" placeholder="Вопрос")      
+                        label(for="email")
+                            input(type="email" placeholder="E-mail")     
+                        button(type="submit").btn Забронировать скидку
+        .map-container
+            #map_canvas
+    .rights
+        .container
+            span © ArtSauna 2017
