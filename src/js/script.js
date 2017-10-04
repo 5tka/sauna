@@ -7,6 +7,11 @@ $(document).ready(function() { // начало document.ready
       duration: 1000
         }
     });
+
+    $('.j_tel').mask("9-999-999-99-99");
+
+    $('.j_select').selectmenu();
+
     $('.header__slider').bxSlider({
         controls: true,
         pager: true,
