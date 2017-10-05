@@ -26,6 +26,7 @@ $(document).ready(function() { // начало document.ready
         centerMode: true,
         variableWidth: true
       });
+
 }); // конец document.ready
 function initialize() {
   //получаем наш div куда будем карту добавлять
