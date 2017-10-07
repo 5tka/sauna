@@ -65,6 +65,25 @@
         border: none;
         background: none;
         margin-bottom: 0;
+        .bx-next {
+            background: url("../img/arrow.png");
+            width: 17px;
+            height: 33px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 0;
+            right: 30px;
+        }
+        .bx-prev {
+            background: url("../img/arrow.png");
+            width: 17px;
+            height: 33px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: 0;
+            transform: rotate(180deg);
+            left: 30px;
+        }
     }
 }
 .p-img {
@@ -490,7 +509,7 @@
     align-items: center;
 }
 .facts-item {
-    width: 31%;
+    width: 32%;
     margin-bottom: 200px;
     position: relative;
     &:after {
@@ -515,6 +534,7 @@
             font-size: 30px;
             font-weight: 700;
             color: #9574dd;
+            margin: 0 5px;
         }
     }
 }

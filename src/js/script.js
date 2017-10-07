@@ -1,5 +1,5 @@
 $(document).ready(function() { // начало document.ready
-
+  new WOW().init();
 
     var containerEl = document.querySelector('.proj-items');
 	var mixer = mixitup(containerEl, {
@@ -7,8 +7,13 @@ $(document).ready(function() { // начало document.ready
       duration: 1000
         }
     });
-
+    $('.iinput-sq').bind("change keyup input click", function() {
+      if (this.value.match(/[^0-9]/g)) {
+          this.value = this.value.replace(/[^0-9]/g, '');
+      }
+  });
     $('.j_tel').mask("9-999-999-99-99");
+    $('.input-tel').mask("9-999-999-99-99");
 
     $('.j_select').selectmenu();
 
@@ -18,19 +23,22 @@ $(document).ready(function() { // начало document.ready
         // auto:true
       });
     $('.p-img').bxSlider({
-        controls: false,
+        controls: true,
         pager: false,
         auto:true
       });
 
     $('.design-slider').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
         centerMode: true,
         variableWidth: true
       });
+      
+      // $('.count-cost__form .count-submit').css('background-color','#d0d0d0');
+        
 
 }); // конец document.ready
 function initialize() {

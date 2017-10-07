@@ -14,7 +14,7 @@ header.header
                 a.tel(href="tel:74955054869") +7 (495) 505 48 69
                 a(href="#").btn
                     | Заказать звонок
-    .header__intro-slider
+    .header__intro-slider.wow.fadeIn(data-wow-duration='1s' data-wow-delay=".5s")
         .header__slider
             .h-slide
                 .h-slide-dscr
@@ -42,12 +42,12 @@ header.header
                                 label(for="name")
                                     input(type="text" placeholder="Имя")
                                 label(for="name")
-                                    input(type="text" placeholder="Телефон")
+                                    input.input-tel(type="text" placeholder="Телефон")
                                 button(type="submit").btn Забронировать скидку
             .h-slide
                 .h-slide-dscr
                     .h-img
-                        img(src="img/header/h1.jpg", alt="")
+                        img(src="img/header/h2.jpg", alt="")
                     .h-dscr
                         p.dscr
                             | Дизайнерская отделка финской сауны 
@@ -70,12 +70,12 @@ header.header
                                 label(for="name")
                                     input(type="text" placeholder="Имя")
                                 label(for="name")
-                                    input(type="text" placeholder="Телефон")
+                                    input.input-tel(type="text" placeholder="Телефон")
                                 button(type="submit").btn Забронировать скидку
             .h-slide
                 .h-slide-dscr
                     .h-img
-                        img(src="img/header/h1.jpg", alt="")
+                        img(src="img/header/h3.jpg", alt="")
                     .h-dscr
                         p.dscr
                             | Дизайнерская отделка инфракрасной кабины 
@@ -98,12 +98,12 @@ header.header
                                 label(for="name")
                                     input(type="text" placeholder="Имя")
                                 label(for="name")
-                                    input(type="text" placeholder="Телефон")
+                                    input.input-tel(type="text" placeholder="Телефон")
                                 button(type="submit").btn Забронировать скидку
             .h-slide
                 .h-slide-dscr
                     .h-img
-                        img(src="img/header/h1.jpg", alt="")
+                        img(src="img/header/h4.jpg", alt="")
                     .h-dscr
                         p.dscr
                             | Дизайнерская отделка сауны в квартире 
@@ -126,5 +126,5 @@ header.header
                                 label(for="name")
                                     input(type="text" placeholder="Имя")
                                 label(for="name")
-                                    input(type="text" placeholder="Телефон")
+                                    input.input-tel(type="text" placeholder="Телефон")
                                 button(type="submit").btn Забронировать скидку

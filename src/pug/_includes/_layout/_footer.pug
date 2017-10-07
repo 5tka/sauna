@@ -1,10 +1,10 @@
 footer.footer
     .container
         .footer-wrapper
-            h2.title
+            h2.title.wow.zoomIn(data-wow-duration='1s')
                 | Как нас найти?    
     .footer-container
-        .f-left
+        .f-left.wow.fadeInLeft(data-wow-duration='1s' data-wow-delay=".3s")
             .f-l-content
                 .adress-wrap    
                     a(href="tel:+74955054869").tel
@@ -25,8 +25,8 @@ footer.footer
                             input(type="text" placeholder="Вопрос")      
                         label(for="email")
                             input(type="email" placeholder="E-mail")     
-                        button(type="submit").btn Забронировать скидку
-        .map-container
+                        button(type="submit").btn отправить
+        .map-container.wow.fadeInRight(data-wow-duration='1s' data-wow-delay=".5s")
             #map_canvas
     .rights
         .container

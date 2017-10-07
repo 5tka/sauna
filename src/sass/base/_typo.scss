@@ -20,3 +20,13 @@ BLack 900
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica');
 // font-family: 'Open Sans', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: 'dj';
+    src: url('fonts/dearjoe_5_casual_1.0_0-webfont.eot');
+    src: url('fonts/dearjoe_5_casual_1.0_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dearjoe_5_casual_1.0_0-webfont.woff') format('woff'),
+         url('fonts/dearjoe_5_casual_1.0_0-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}

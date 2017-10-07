@@ -2,7 +2,7 @@
 //="../../../bower_components/mixitup/dist/mixitup.js"
 //="../../../bower_components/bxslider-4/src/js/jquery.bxslider.js"
 //="../../../bower_components/slick-carousel/slick/slick.js"
-
+//="../../../bower_components/wow/dist/wow.js"
 
 /*
     jQuery Masked Input Plugin
