@@ -31,3 +31,33 @@ footer.footer
     .rights
         .container
             span © ArtSauna 2017
+
+
+
+.popup-form-wrapper.popup-form-wrapper-1
+    .popup-title
+        h4
+        span
+        .popup-close
+            img(src="img/close.png", alt="")
+    .popup-form
+        form(action="/")
+            lable(for="name")
+                input(type="text" placeholder="Введите Ваше имя")
+            lable(for="tel")
+                input.input-tel(type="text" placeholder="Введите Ваш номер телефона")
+            .button-wrap
+                button(type="submit").btn Отправить
+
+.popup-form-wrapper.popup-form-wrapper-2
+    .popup-title
+        h4
+        span
+        .popup-close
+            img(src="img/close.png", alt="")
+    .popup-form
+        form(action="/")
+            lable(for="tel")
+                input.input-tel(type="text" placeholder="Телефон")
+            .button-wrap
+                button(type="submit").btn Отправить

@@ -3,7 +3,7 @@
 //="../../../bower_components/bxslider-4/src/js/jquery.bxslider.js"
 //="../../../bower_components/slick-carousel/slick/slick.js"
 //="../../../bower_components/wow/dist/wow.js"
-
+//="../../../bower_components/bPopup/jquery.bpopup.js"
 /*
     jQuery Masked Input Plugin
     Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)

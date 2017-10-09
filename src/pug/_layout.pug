@@ -6,7 +6,10 @@ html(lang="ru-RU")
 		.wrapper
 			.maincontent
 				block header
-					include ./_includes/_layout/_header.pug
+					block header_top
+						include ./_includes/_layout/_header-top-line.pug
+					block header_main
+						include ./_includes/_layout/_header.pug
 				main
 					block main
 						include ./_includes/_layout/_main.pug

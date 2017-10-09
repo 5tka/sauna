@@ -100,7 +100,7 @@
 .p-img-h {
     @extend .p-img;
     // height: 420px;
-    height: 600px;
+    height: 500px;
     // overflow-x: scroll;
     // overflow-y: hidden;
     img {
@@ -199,6 +199,16 @@
         font-family: "Noto Sans", serif;
         line-height: 28px;
         margin-bottom: 45px;
+    }
+    .btn{
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+        display: block;
+        width: 500px;
+        max-width: 500px;
+        margin-bottom: 20px;
     }
 }
 .design-slider {
@@ -309,12 +319,7 @@
     max-width: 825px;
     color: #fff;
     background-color: rgba(0, 0, 0, .4);
-    .dscr {
-        font-family: "Noto Serif", serif;
-        font-size: 40px;
-        margin-bottom: 20px;
-        line-height: 42px;
-        position: relative;
+    p {
         .num {
             font-weight: 700;
             font-style: italic;
@@ -324,6 +329,13 @@
             margin-right: 5px;
             margin-top: 5px;
         }
+    }
+    .dscr {
+        font-family: "Noto Serif", serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+        line-height: 42px;
+        position: relative;
     }
     .sub-dscr {
         font-family: "Open Sans", sans-serif;
@@ -807,104 +819,5 @@
         line-height: 60px;
         font-size: 14px;
         width: 100%;
-    }
-}
-.footer {
-    padding-top: 70px;
-}
-.footer-wrapper {
-    h2 {
-        margin-bottom: 55px;
-    }
-}
-.f-left {
-    max-width: 525px;
-    text-align: left;
-    padding: 0 20px;
-    padding-top: 40px;
-}
-
-.footer-container {
-    background-image: url("../img/blog/bg.jpg");
-    font-size: 0;
-    text-align: right;
-     > div {
-        vertical-align: top;
-        display: inline-block;
-    }
-}
-.f-l-content {
-    width: 415px;
-    margin: 0 auto;
-}
-.adress-wrap {
-    color: #2d2d2d;
-    font-family: "Noto Sans", sans-serif;
-    a {
-        display: block;
-        margin-bottom: 15px;
-    }
-    .tel {
-        font-family: "Noto Sans", sans-serif;
-        font-size: 22px;
-    }
-    .mail {
-        font-size: 18px;
-        margin-bottom: 45px;
-    }
-    p {
-        font-size: 18px;
-        line-height: 34px;
-    }
-}
-.form-wrap {
-    margin-top: 50px;
-    p {
-        font-family: "Noto Serif", sans-serif;
-        font-size: 18px;
-        line-height: 24px;
-        span {
-            color: #9271d9;
-        }
-    }
-    .form {
-        margin-top: 35px;
-        input {
-            text-align: left;
-            border: 1px solid #d0d0d0;
-            padding-left: 25px;
-            color: #2a2a2a;
-        }
-        input::-webkit-input-placeholder {
-            color: #909090;
-        }
-        input::-moz-placeholder {
-            color: #909090;
-        }
-        input:-ms-input-placeholder {
-            color: #909090;
-        }
-        input:-moz-placeholder {
-            color: #909090;
-        }
-    }
-}
-.map-container {
-    width: 65%;
-    height: 600px;
-    #map_canvas {
-        width: 100%;
-        height: 100%;
-    }
-}
-.rights {
-    border-top: 2px solid #9271d9;
-    background-color: #2d2d2d;
-    line-height: 70px;
-    span {
-        display: block;
-        text-align: right;
-        font-family: "Open Sans", sans-serif;
-        color: #fff;
     }
 }

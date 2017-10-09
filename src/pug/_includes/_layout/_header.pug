@@ -1,130 +1,116 @@
-- var menu = ['Услуги','Портфолио','О нас','Блог']
-header.header
-    .container
-        .header__top-line
-            .logo   
-                a(href="#")
-                    img(src="img/logo.png", alt="")
-            .header__nav
-                ul.nav__list
-                    each item in menu
-                        li.nav__item
-                            a(href="#").nav__link= item
-            .tel-block
-                a.tel(href="tel:74955054869") +7 (495) 505 48 69
-                a(href="#").btn
-                    | Заказать звонок
-    .header__intro-slider.wow.fadeIn(data-wow-duration='1s' data-wow-delay=".5s")
-        .header__slider
-            .h-slide
-                .h-slide-dscr
-                    .h-img
-                        img(src="img/header/h1.jpg", alt="")
-                    .h-dscr
-                        p.dscr
-                            | Дизайнерская отделка русской бани 
-                            | «под ключ» за 
-                            span.num 7 
-                            | дней
-                        p.sub-dscr
-                            | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
-                .header-form
-                    .f-content
-                        .f-center
-                            .form-title
-                                p
-                                    span Сделайте предзаказ <br>
-                                    | на зимний сезон <br>
-                                    | и получите
-                                    span.perc скидку 20% <br>
-                                    span на весь проект!
-                            form(action="/").form
-                                label(for="name")
-                                    input(type="text" placeholder="Имя")
-                                label(for="name")
-                                    input.input-tel(type="text" placeholder="Телефон")
-                                button(type="submit").btn Забронировать скидку
-            .h-slide
-                .h-slide-dscr
-                    .h-img
-                        img(src="img/header/h2.jpg", alt="")
-                    .h-dscr
-                        p.dscr
-                            | Дизайнерская отделка финской сауны 
-                            | «под ключ» за 
-                            span.num 3 
-                            | дня
-                        p.sub-dscr
-                            | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
-                .header-form
-                    .f-content
-                        .f-center
-                            .form-title
-                                p
-                                    span Сделайте предзаказ <br>
-                                    | на зимний сезон <br>
-                                    | и получите
-                                    span.perc скидку 20% <br>
-                                    span на весь проект!
-                            form(action="/").form
-                                label(for="name")
-                                    input(type="text" placeholder="Имя")
-                                label(for="name")
-                                    input.input-tel(type="text" placeholder="Телефон")
-                                button(type="submit").btn Забронировать скидку
-            .h-slide
-                .h-slide-dscr
-                    .h-img
-                        img(src="img/header/h3.jpg", alt="")
-                    .h-dscr
-                        p.dscr
-                            | Дизайнерская отделка инфракрасной кабины 
-                            | «под ключ» за 
-                            span.num 3 
-                            | дня
-                        p.sub-dscr
-                            | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
-                .header-form
-                    .f-content
-                        .f-center
-                            .form-title
-                                p
-                                    span Сделайте предзаказ <br>
-                                    | на зимний сезон <br>
-                                    | и получите
-                                    span.perc скидку 20% <br>
-                                    span на весь проект!
-                            form(action="/").form
-                                label(for="name")
-                                    input(type="text" placeholder="Имя")
-                                label(for="name")
-                                    input.input-tel(type="text" placeholder="Телефон")
-                                button(type="submit").btn Забронировать скидку
-            .h-slide
-                .h-slide-dscr
-                    .h-img
-                        img(src="img/header/h4.jpg", alt="")
-                    .h-dscr
-                        p.dscr
-                            | Дизайнерская отделка сауны в квартире 
-                            | «под ключ» за 
-                            span.num 3 
-                            | дней
-                        p.sub-dscr
-                            | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
-                .header-form
-                    .f-content
-                        .f-center
-                            .form-title
-                                p
-                                    span Сделайте предзаказ <br>
-                                    | на зимний сезон <br>
-                                    | и получите 
-                                    span.perc скидку 20% <br>
-                                    span на весь проект!
-                            form(action="/").form
-                                label(for="name")
-                                    input(type="text" placeholder="Имя")
-                                label(for="name")
-                                    input.input-tel(type="text" placeholder="Телефон")
-                                button(type="submit").btn Забронировать скидку
+.header__intro-slider.wow.fadeIn(data-wow-duration='1s' data-wow-delay=".5s")
+    .header__slider
+        .h-slide
+            .h-slide-dscr
+                .h-img
+                    img(src="img/header/h1.jpg", alt="")
+                .h-dscr
+                    p.dscr
+                        | Дизайнерская отделка русской бани 
+                        | «под ключ» за 
+                        span.num 7 
+                        | дней
+                    p.sub-dscr
+                        | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
+            .header-form
+                .f-content
+                    .f-center
+                        .form-title
+                            p
+                                span Сделайте предзаказ <br>
+                                | на зимний сезон <br>
+                                | и получите
+                                span.perc скидку 20% <br>
+                                span на весь проект!
+                        form(action="/").form
+                            label(for="name")
+                                input(type="text" placeholder="Имя")
+                            label(for="name")
+                                input.input-tel(type="text" placeholder="Телефон")
+                            button(type="submit").btn.popup-2(data-h4='Оставьте контакты' data-span='и мы свяжемся с Вами для оформления заявки') Забронировать скидку
+        .h-slide
+            .h-slide-dscr
+                .h-img
+                    img(src="img/header/h2.jpg", alt="")
+                .h-dscr
+                    p.dscr
+                        | Дизайнерская отделка финской сауны 
+                        | «под ключ» за 
+                        span.num 3 
+                        | дня
+                    p.sub-dscr
+                        | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
+            .header-form
+                .f-content
+                    .f-center
+                        .form-title
+                            p
+                                span Сделайте предзаказ <br>
+                                | на зимний сезон <br>
+                                | и получите
+                                span.perc скидку 20% <br>
+                                span на весь проект!
+                        form(action="/").form
+                            label(for="name")
+                                input(type="text" placeholder="Имя")
+                            label(for="name")
+                                input.input-tel(type="text" placeholder="Телефон")
+                            button(type="submit").btn.popup-2(data-h4='Оставьте контакты' data-span='и мы свяжемся с Вами для оформления заявки') Забронировать скидку
+
+        .h-slide
+            .h-slide-dscr
+                .h-img
+                    img(src="img/header/h3.jpg", alt="")
+                .h-dscr
+                    p.dscr
+                        | Дизайнерская отделка инфракрасной кабины 
+                        | «под ключ» за 
+                        span.num 3 
+                        | дня
+                    p.sub-dscr
+                        | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
+            .header-form
+                .f-content
+                    .f-center
+                        .form-title
+                            p
+                                span Сделайте предзаказ <br>
+                                | на зимний сезон <br>
+                                | и получите
+                                span.perc скидку 20% <br>
+                                span на весь проект!
+                        form(action="/").form
+                            label(for="name")
+                                input(type="text" placeholder="Имя")
+                            label(for="name")
+                                input.input-tel(type="text" placeholder="Телефон")
+                            button(type="submit").btn.popup-2(data-h4='Оставьте контакты' data-span='и мы свяжемся с Вами для оформления заявки') Забронировать скидку
+
+        .h-slide
+            .h-slide-dscr
+                .h-img
+                    img(src="img/header/h4.jpg", alt="")
+                .h-dscr
+                    p.dscr
+                        | Дизайнерская отделка сауны в квартире 
+                        | «под ключ» за 
+                        span.num 3 
+                        | дней
+                    p.sub-dscr
+                        | Бесплатный выезд и дизайн-проект, элитные экологичные материалы, финское оборудование
+            .header-form
+                .f-content
+                    .f-center
+                        .form-title
+                            p
+                                span Сделайте предзаказ <br>
+                                | на зимний сезон <br>
+                                | и получите 
+                                span.perc скидку 20% <br>
+                                span на весь проект!
+                        form(action="/").form
+                            label(for="name")
+                                input(type="text" placeholder="Имя")
+                            label(for="name")
+                                input.input-tel(type="text" placeholder="Телефон")
+                            button(type="submit").btn.popup-2(data-h4='Оставьте контакты' data-span='и мы свяжемся с Вами для оформления заявки') Забронировать скидку

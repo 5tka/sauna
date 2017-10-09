@@ -1,0 +1,418 @@
+extends _layout.pug
+block header_main
+    .header__intro-slider.wow.fadeIn(data-wow-duration='1s' data-wow-delay=".5s")
+        .header__slider-rus
+            .h-slide
+                .h-slide-dscr
+                    .h-img
+                        img(src="img/header/h1.jpg", alt="")
+                    .h-dscr
+                        p.dscr
+                            | Русская Баня
+                        p.sub-dscr
+                            | Получите индивидуальный расчет и скидку 
+                            span.num 20% 
+                            | при заказе на зимний сезон!
+                .header-form
+                    .f-content
+                        .f-center
+                            .form-title
+                                p.rus-title
+                                    span Заполните форму <br>
+                                    | и мы подготовим <br>
+                                    span.perc 
+                                        | персональное коммерческое <br>
+                                        | предложение 
+                                    | с учетом <br>
+                                    | скидки по вашему проекту
+                            form(action="/").form
+                                label(for="name")
+                                    input(type="text" placeholder="Имя")
+                                label(for="name")
+                                    input.input-tel(type="text" placeholder="Телефон")
+                                button(type="submit").btn Забронировать скидку
+block main
+    .main
+        section.offer.rus-offer
+            .container
+                h2.title.wow.zoomIn(data-wow-duration='1s')
+                    | Как устроена русская баня?
+                p.par-title.
+                    Русская баня - предмет восхищения для настоящих ценителей парных, выполненных в лучших славянских традициях. 
+                    Мягкий влажный воздух обеспечивает эффект "легкого пара". Финская сауна отличается высокой температурой 
+                    и низкой влажностью, турецкому хаммаму, напротив, свойственна практически 100%-я влажность и небольшая 
+                    температура. Русская баня - это "золотая середина" с оптимальным микроклиматом.
+                .offer-items
+                    .offer-item
+                        .o-dscr.wow.fadeInLeft(data-wow-duration='2s'  data-wow-delay='.5s')
+                            p.dscr.
+                                Основное отличие русской бани от финской сауны – структура мелкодисперсного 
+                                пара, получить который можно только путем поливания водой камней, прогретых 
+                                до температуры 400 °C и выше.Такой температурный режим соблюдается 
+                                исключительно за счет дровяных печей.
+                        .o-img.wow.fadeInRight(data-wow-duration='2s' data-wow-delay='.3s')
+                            img(src="img/offers/o5.jpg", alt="")
+                    .offer-item
+                        .o-img.wow.fadeInLeft(data-wow-duration='2s' data-wow-delay='.7s')
+                            img(src="img/offers/o6.jpg", alt="")
+                        .o-dscr.wow.fadeInRight(data-wow-duration='2s' data-wow-delay='.9s')
+                            p.dscr.
+                                Оптимальной температуры удается достичь с помощью печей на дровах, 
+                                где сами топки выполнены из железа, а всю поверхность топки со стороны 
+                                парилки покрывает облицовка из натурального камня талькомагнезит.
+                                ArtSauna использует дровяные печи финского бренда Tulikivi - лидера по 
+                                производству отопительного оборудования для бань класса премиум.
+                    .offer-item
+                        .o-dscr.wow.fadeInLeft(data-wow-duration='2s'  data-wow-delay='1.3s')
+                            p.dscr.
+                                Идеальный вариант оборудования для русской парной - печь "по-серому". 
+                                В ней огонь при горении проходит сквозь камни (парообразующую массу) 
+                                вместе с дымом, который далее удаляется через дымоход. Камни раскаляются 
+                                до красного цвета, в результате чего образуется мелкодисперсный, известный 
+                                как русский, мягкий или легкий пар, в котором вода расщепляется на молекулы.
+                        .o-img.wow.fadeInRight(data-wow-duration='2s'  data-wow-delay='1.1s')
+                            img(src="img/offers/o7.jpg", alt="")
+        section.material
+            .container
+                h2.title.wow.zoomIn(data-wow-duration='1s')
+                    | Материалы для элитной отделки
+                .material-items
+                    .material-item
+                        .m-dscr.wow.fadeInLeft(data-wow-duration='2s'  data-wow-delay='.5s')
+                            .m-info
+                                h4.title
+                                    | Облицовка печи
+                                p.dscr.
+                                    Талькомагнезит - это природный минерал вулканического 
+                                    происхождения. Экологичному материалу свойственна 
+                                    долговременная отдача тепла - 26 часов, за счет чего 
+                                    идеальную для парения температуру можно 
+                                    поддерживать как угодно долго.                            
+                        .m-img.wow.fadeInRight(data-wow-duration='2s' data-wow-delay='.3s')
+                            img(src="img/materials/m1.jpg", alt="")
+                    .material-item
+                        .m-img.wow.fadeInLeft(data-wow-duration='2s' data-wow-delay='.7s')
+                            img(src="img/materials/m2.jpg", alt="")
+                        .m-dscr.wow.fadeInRight(data-wow-duration='2s'  data-wow-delay='.9s')
+                            .m-info
+                                h4.title
+                                    | Внутренняя отделка
+                                p.dscr.
+                                    Африканский дуб и ольха, кедр и липа, лиственница 
+                                    и береза - использование этих древесных пород обеспечивает 
+                                    не только эстетику помещения, но и целебное воздействие 
+                                    пребывания в нем за счет благотворных эфирных испарений.                         
+                    .material-item
+                        .m-dscr.wow.fadeInLeft(data-wow-duration='2s' data-wow-delay='1.3s')
+                            .m-info                        
+                                h4.title
+                                    | Декор и аксессуары
+                                p.dscr.
+                                    Элементы декора и мебель могут быть выполнены из любого 
+                                    материала экстра-класса, в том числе термоабаша и канадского 
+                                    кедра. Используются панно с подсветкой из гималайской соли, 
+                                    абажуры ручной работы и другие дизайнерские элементы.                          
+                        .m-img.wow.fadeInRight(data-wow-duration='2s' data-wow-delay='1.1s')
+                            img(src="img/materials/m3.jpg", alt="")
+                    .material-item
+                        .m-img.wow.fadeInLeft(data-wow-duration='2s' data-wow-delay='1.5s')
+                            img(src="img/materials/m4.jpg", alt="")
+                        .m-dscr.wow.fadeInRight(data-wow-duration='2s' data-wow-delay='1.7s')
+                            .m-info
+                                h4.title
+                                    | Теплый камень
+                                p.dscr.
+                                    Состоит из двух минералов: талька и магнезита (27% -48%), 
+                                    который определяет прочностные и теплонакопительные 
+                                    свойства этого материала. Талькомагнезит превосходит 
+                                    печной кирпич по теплонакопительным свойствам в 2.5 раза, 
+                                    что обеспечивает компактность и легкость изделий.                        
+        section.projects-rus
+            .container
+                h2.title.wow.zoomIn(data-wow-duration='1s')
+                    | Примеры выполненных проектов
+            .proj-items
+                .proj-item.wow.fadeIn(data-wow-duration='2s' data-wow-delay='.3s')
+                    .proj-part
+                        .p-img
+                            img(src="img/proj/p3/l_1.jpg", alt="")
+                            img(src="img/proj/p3/l_2.jpg", alt="")
+                            img(src="img/proj/p3/l_3.jpg", alt="")
+                            img(src="img/proj/p3/l_4.jpg", alt="")
+                        .p-dscr
+                            span.sub-title
+                                | русские бани
+                            h4.title
+                                | отделка русской п. Завидово, <br>
+                                | Тверская обл.
+                    .proj-part
+                        .p-dscr
+                            .list
+                                span.list-title
+                                    | Что мы сделали?
+                                ul.list-dscr
+                                    li.item-dscr Облицовка печи комбинацией гималайской соли и плитки Tulikivi
+                                    li.item-dscr Монтаж двухуровнегого потолка с подсветкой
+                                    li.item-dscr Декор потолка панно с кругляками из можжевельника 
+                                    li.item-dscr Установка печи и облицовка талькомагнезитом
+                            .list
+                                span.list-title
+                                    | Материалы и оборудование
+                                ul.list-dscr
+                                    li.item-dscr Стены и потолок из канадского кедра, абаша
+                                    li.item-dscr Освещение Cariitti
+                                    li.item-dscr Печь Kastor 27 в облицовке из талькомагнезита Tulikivi
+                                    li.item-dscr Дымоход Schiedel UNI, облицованный талькомагнезитной плиткой Tulikivi
+                                    li.item-dscr Двухуровневый потолок, декорированный можжевеловым панно
+                                    li.item-dscr Дверь Tylo
+                                    li.item-dscr Большое панно - комбинация плитки Tulikivi и гималайской соли с боковой подсветкой Cariitti
+                        .p-img.p-img-h
+                            img(src="img/proj/p3/l_1.jpg", alt="")
+                            img(src="img/proj/p3/l_2.jpg", alt="")
+                            img(src="img/proj/p3/l_3.jpg", alt="")
+                            img(src="img/proj/p3/l_4.jpg", alt="")
+                .proj-item.wow.fadeIn(data-wow-duration='2s' data-wow-delay='.5s')
+                    .proj-part
+                        .p-img
+                            img(src="img/proj/p1/l_1.jpg", alt="")
+                            img(src="img/proj/p1/l_2.jpg", alt="")
+                            img(src="img/proj/p1/l_3.jpg", alt="")
+                            img(src="img/proj/p1/l_4.jpg", alt="")
+                            img(src="img/proj/p1/l_5.jpg", alt="")
+                        .p-dscr
+                            span.sub-title
+                                | русские бани
+                            h4.title
+                                | Отделка бани в КП «Аксаково»
+                    .proj-part
+                        .p-dscr
+                            .list
+                                span.list-title
+                                    | Что мы сделали?
+                                ul.list-dscr
+                                    li.item-dscr Индивидуальный дизайн-проект
+                                    li.item-dscr Внутренняя отделка «Премиум»
+                                    li.item-dscr Полукрыглый подлокотник выполнен из абаши
+                                    li.item-dscr Потолок выполнен в двух уровнях, в центре можжевеловое панно в форме шестигранника
+                                    li.item-dscr Нижний ярус полока также выполнен с полукруглыми элементами
+                            .list
+                                span.list-title
+                                    | Материалы и оборудование
+                                ul.list-dscr
+                                    li.item-dscr Печь Kastor
+                                    li.item-dscr Облицовка «Президент» из талькомагнезита
+                                    li.item-dscr Дымоход Schiedel
+                                    li.item-dscr Дверь Harvia
+                                    li.item-dscr Стены и потолок – вагонка из ольхи экстра-класса
+                                    li.item-dscr Мебель – абаш (афрканский дуб)
+                                    li.item-dscr Декор – термоабаш, талькомагнезит
+                                    li.item-dscr Освещение – светильники Lindner, стекловолокно Cariitti
+                        .p-img-h
+                            img(src="img/proj/p5/b_1.jpg")
+
+                .proj-item.wow.fadeIn(data-wow-duration='2s' data-wow-delay='.7s')
+                    .proj-part
+                        .p-img
+                            img(src="img/proj/p2/l_1.jpg", alt="")
+                            img(src="img/proj/p2/l_2.jpg", alt="")
+                            img(src="img/proj/p2/l_3.jpg", alt="")
+                            img(src="img/proj/p2/l_4.jpg", alt="")
+                            img(src="img/proj/p2/l_5.jpg", alt="")
+                        .p-dscr
+                            span.sub-title
+                                | русские бани
+                            h4.title
+                                | Премиум-отделка русской бани в <br> г. Тула
+                    .proj-part
+                        .p-dscr
+                            .list
+                                span.list-title
+                                    | Что мы сделали?
+                                ul.list-dscr
+                                    li.item-dscr Индивидуальный дизайн-проект
+                                    li.item-dscr Внутренняя отделка «Премиум»
+                                    li.item-dscr Комплексное обустройство нестандартного помещения с 7-ю углами
+                                    li.item-dscr Часть задней стены задекорирована панно из гималайской соли, изготовленном в цеху
+                            .list
+                                span.list-title
+                                    | Материалы и оборудование
+                                ul.list-dscr
+                                    li.item-dscr Вагонка из канадского кедра и ольхи экстра-класса
+                                    li.item-dscr Мебель – абаш (афрканский дуб)
+                                    li.item-dscr Декор – канадский кедр, талькомагнезит, абаши
+                                    li.item-dscr Облицовка дымохода и подиума плиткой «Tulikivi» из талькомагнезита
+                                    li.item-dscr Светильники Lindner, стекловолокно Cariitti
+                                    li.item-dscr Светодиодная подсветка панно из гималайской соли
+                        .p-img-h
+                            img(src="img/proj/p5/b_1.jpg")
+                .proj-item.wow.fadeIn(data-wow-duration='2s' data-wow-delay='.9s')
+                    .proj-part
+                        .p-img
+                            img(src="img/proj/p4/l_1.jpg", alt="")
+                            img(src="img/proj/p4/l_2.jpg", alt="")
+                            img(src="img/proj/p4/l_3.jpg", alt="")
+                            img(src="img/proj/p4/l_4.jpg", alt="")
+                        .p-dscr
+                            span.sub-title
+                                | финская сауна
+                            h4.title
+                                |Отделка бани в п. Здравница, <br>
+                                |Мытишинский р-н 
+
+                    .proj-part
+                        .p-dscr
+                            .list
+                                span.list-title
+                                    | Что мы сделали?
+                                ul.list-dscr
+                                    li.item-dscr Отделка парной
+                                    li.item-dscr Установка печей и освещения
+                                    li.item-dscr Сантехнические работы
+                                    li.item-dscr Оформление комнаты отдыха
+                            .list
+                                span.list-title
+                                    | Материалы и оборудование
+                                ul.list-dscr
+                                    li.item-dscr Липа для вагонки, абаш и термо-абаш для полока
+                                    li.item-dscr Покрытие пола лиственницей
+                                    li.item-dscr Отделка стен сосной
+                                    li.item-dscr Светильники с резными березовыми абажурами Harvia
+                                    li.item-dscr Стеклянная дверь Aldo 
+                        .p-img.p-img-h
+                            img(src="img/proj/p4/b_1.jpg", alt="")
+                            img(src="img/proj/p4/b_2.jpg", alt="")
+                            img(src="img/proj/p4/b_3.jpg", alt="")
+                            img(src="img/proj/p4/b_4.jpg", alt="")
+                .proj-item.wow.fadeIn(data-wow-duration='2s' data-wow-delay='1.1s')
+                    .proj-part
+                        .p-img
+                            img(src="img/proj/p5/l_1.jpg", alt="")
+                            img(src="img/proj/p5/l_2.jpg", alt="")
+                            img(src="img/proj/p5/l_3.jpg", alt="")
+                            img(src="img/proj/p5/l_4.jpg", alt="")
+                            img(src="img/proj/p5/l_5.jpg", alt="")
+                            img(src="img/proj/p5/l_6.jpg", alt="")
+                        .p-dscr
+                            span.sub-title
+                                | русские бани
+                            h4.title
+                                | Отделка бани в КП «Серебряная подкова», <br> Домодедовский р-н
+                    .proj-part
+                        .p-dscr
+                            .list
+                                span.list-title
+                                    | Что мы сделали?
+                                ul.list-dscr
+                                    li.item-dscr Внутренняя и внешняя отделка бани деревом
+                                    li.item-dscr Изготовление двухъярусного полока
+                                    li.item-dscr Декор парилки, установка подстветки и двери
+                                    li.item-dscr Монтаж печи
+                                    li.item-dscr Обрамление стен плитой
+                                    li.item-dscr Обустройство душевой
+                            .list
+                                span.list-title
+                                    | Материалы и оборудование
+                                ul.list-dscr
+                                    li.item-dscr Вагонка из ольхи, покрытие пола лиственницей
+                                    li.item-dscr Три вида термо- и влагостойкой древесины: ольха, абаш и липа
+                                    li.item-dscr Плита и камни для отделки стен и печи
+                                    li.item-dscr Аксессуары и дверь Harvia
+                                    li.item-dscr Печь Harvia Legend 240 Duo
+                        .p-img.p-img-h
+                            img(src="img/proj/p5/b_1.jpg", alt="")
+                            img(src="img/proj/p5/b_2.jpg", alt="")
+                            img(src="img/proj/p5/b_3.jpg", alt="")
+                            img(src="img/proj/p5/b_4.jpg", alt="")
+                            img(src="img/proj/p5/b_5.jpg", alt="")
+                a(href="#").btn Заказать русскую баню под ключ
+        section.info
+            .container
+                .facts-wrapper
+                    h2.title.wow.zoomIn(data-wow-duration='1s').
+                        Почему именно русская баня?
+                .facts-items.rus-info-items
+                    .facts-item.wow.fadeInLeft(data-wow-duration='1s' data-wow-delay=".3s")
+                        .i-img
+                            .sprite.sprite-i1
+                        .f-dscr
+                            p
+                                | Кожа очищается, открываются поры,
+                                | выводятся шлаки и токсины
+                    .facts-item.wow.fadeInDown(data-wow-duration='1s' data-wow-delay=".5s")
+                        .i-img
+                            .sprite.sprite-i2
+                        .f-dscr
+                            p
+                                | Снимается мышечная боль, снимается 
+                                | напряжение после физических нагрузок
+                    .facts-item.wow.fadeInRight(data-wow-duration='1s' data-wow-delay=".7s")
+                        .i-img
+                            .sprite.sprite-i3
+                        .f-dscr
+                            p
+                                | Ускоряется обмен веществ, фигура
+                                | становится стройнее, исчезают отеки
+                    .facts-item.wow.fadeInLeft(data-wow-duration='1s' data-wow-delay=".9s")
+                        .i-img
+                            .sprite.sprite-i4
+                        .f-dscr
+                            p
+                                | Укрепляется иммунитет, повышается
+                                | тонус кровеносных сосудов
+                    .facts-item.wow.fadeInUp(data-wow-duration='1s' data-wow-delay="1.1s")
+                        .i-img
+                            .sprite.sprite-i5
+                        .f-dscr
+                            p
+                                | Устраняются застои крови и лимфы,
+                                | предотвращаются заболевания костей
+                    .facts-item.wow.fadeInRight(data-wow-duration='1s' data-wow-delay="1.3s")
+                        .i-img
+                            .sprite.sprite-i6
+                        .f-dscr
+                            p
+                                | "Легкий пар" и веничный массаж
+                                | благотворно влияют на нервную систему
+        section.about
+            .container
+                h2.title.wow.zoomIn(data-wow-duration='1s').
+                    Почему именно ArtSauna?
+            .about-items
+                .about-item.about-item-1.wow.fadeInLeft(data-wow-duration="1.5s" data-wow-delay=".3s")
+                    .about-dscr 
+                        .ab-content
+                            h4.title
+                                | Почему именно 
+                                span.dj5 Art Sauna
+                            p.dscr.
+                                Создаем нестандартные бани и сауны на любое количество углов, 
+                                с дополнительными помещениями и элементами освещения. 
+                                Авторский декор превращает каждый объект в образец искусства.
+                .about-item.about-item-2.wow.fadeInRight(data-wow-duration="1.5s" data-wow-delay=".5s")
+                    .about-dscr 
+                        .ab-content
+                            h4.title
+                                | Уникальные технологии
+                            p.dscr.
+                                Строительство по бесклеевой технологии, соблюдение стандартов 
+                                безопасности, использование элементов повышенной влаго- 
+                                и термостойкости - залог безопасности и максимального комфорта.
+                .about-item.about-item-3.wow.fadeInLeft(data-wow-duration="1.5s" data-wow-delay=".7s")
+                    .about-dscr 
+                        .ab-content
+                            h4.title
+                                | Материалы эстра-класса
+                            p.dscr.
+                                Применяем только дорогие породы дерева, такие как африканский 
+                                дуб, термоабаш, канадский кедр и др. Облицовка печей - 
+                                из талькомагнезита, декор - из гималайской соли, 
+                                натуральных спилов можжевельника. 
+                .about-item.about-item-4.wow.fadeInRight(data-wow-duration="1.5s" data-wow-delay=".9s")
+                    .about-dscr 
+                        .ab-content
+                            h4.title
+                                | Брендовое оборудование
+                            p.dscr.
+                                ArtSauna является официальным диллером финского 
+                                производителя  оборудования Tulikivi. Используем продукцию 
+                                Kastor, Cariitti, Schiedel и др.

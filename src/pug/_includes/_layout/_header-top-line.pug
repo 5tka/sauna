@@ -1,0 +1,16 @@
+- var menu = ['Услуги','Портфолио','О нас','Блог']
+header.header
+    .container
+        .header__top-line
+            .logo   
+                a(href="#")
+                    img(src="img/logo.png", alt="")
+            .header__nav
+                ul.nav__list
+                    each item in menu
+                        li.nav__item
+                            a(href="#").nav__link= item
+            .tel-block
+                a.tel(href="tel:74955054869") +7 (495) 505 48 69
+                a(href="#").btn.popup-2(data-h4='Заполните форму' data-span='и мы свяжемся с Вами в течение 30 минут')
+                    | Заказать звонок

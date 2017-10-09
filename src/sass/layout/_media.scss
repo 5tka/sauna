@@ -1,7 +1,29 @@
 .wrapper {
     overflow-x: hidden;
 }
-
+@include breakpoint(1650) {
+    .header__intro-slider {
+        .bx-viewport {
+            height: 420px !important;
+        }
+    }
+    .h-dscr {
+        max-width: 600px;
+        .dscr {
+            font-size: 35px;
+            line-height: 35px;
+            .num {
+                font-size: 55px;
+            }
+        }
+    }
+    .h-img {
+        height: 420px;
+        img {
+            height: 100%;
+        }
+    }
+}
 @include breakpoint(1440) {
     .header__intro-slider .bx-wrapper .bx-next {
         right: 380px;
@@ -49,6 +71,11 @@
         height: 120px;
     }
 }
+@include breakpoint(1250) {
+    .rus-info-items .facts-item {
+        width: 48%;
+    }
+}
 @include breakpoint(1220) {
     .equipment-wrapper {
         padding: 0 20px;
@@ -61,29 +88,29 @@
         }
     }
 }
-@include breakpoint(1210) {
-    .header__intro-slider {
-        .bx-viewport {
-            height: 420px !important;
-        }
-    }
-    .h-dscr {
-        max-width: 600px;
-        .dscr {
-            font-size: 35px;
-            line-height: 35px;
-            .num {
-                font-size: 55px;
-            }
-        }
-    }
-    .h-img {
-        height: 420px;
-        img {
-            height: 100%;
-        }
-    }
-}
+// @include breakpoint(1210) {
+//     .header__intro-slider {
+//         .bx-viewport {
+//             height: 420px !important;
+//         }
+//     }
+//     .h-dscr {
+//         max-width: 600px;
+//         .dscr {
+//             font-size: 35px;
+//             line-height: 35px;
+//             .num {
+//                 font-size: 55px;
+//             }
+//         }
+//     }
+//     .h-img {
+//         height: 420px;
+//         img {
+//             height: 100%;
+//         }
+//     }
+// }
 @include breakpoint(1150) {
     .count-wrapper {
         margin: auto;
@@ -98,6 +125,38 @@
     }
     .b-dscr span {
         font-size: 16px;
+    }
+}
+
+@include breakpoint(1110) {
+    .rus-offer {
+        .offer-items {
+            margin-top: 20px;
+        }
+        .offer-item {
+            margin-bottom: 40px;
+        }
+    }
+}
+@include breakpoint(1000) {
+    .material-item {
+        // display: block;
+        flex-wrap: wrap;
+         > div {
+            width: 100%;
+        }
+        &:nth-child(2n) {
+            flex-direction: column-reverse;
+        }
+    }
+    .m-info {
+        max-width: 100%;
+        h4.title {
+            text-align: center;
+        }
+    }
+    .m-dscr {
+        margin-bottom: 15px;
     }
 }
 @include breakpoint(1000) {
@@ -215,6 +274,17 @@
     }
 }
 @include breakpoint(900) {
+    .about-item {
+        width: 100%;
+        margin-left: 0;
+    }
+    .about-dscr {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 15px !important;
+    }
+}
+@include breakpoint(900) {
     .logo {
         width: 200px;
     }
@@ -225,18 +295,18 @@
         height: 220px;
     }
     .footer-container {
-        > div {
-           width: 100%;
-           max-width: 100%;
-       }
-   }
-   .f-left{
-       margin-bottom: 25px;
-       text-align: center;
-   }
-   .f-l-content{
-       width: 100%;
-   }
+         > div {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .f-left {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .f-l-content {
+        width: 100%;
+    }
 }
 @include breakpoint(850) {
     .h-dscr {
@@ -249,9 +319,9 @@
     .header__intro-slider .bx-wrapper .bx-next {
         right: 15px;
     }
-    .filter-controls{
+    .filter-controls {
         text-align: center;
-        li{
+        li {
             margin: {
                 right: 10px !important;
                 left: 10px !important;
@@ -275,6 +345,19 @@
         width: 48%;
         .c-dscr p {
             height: 60px;
+        }
+    }
+}
+@include breakpoint(850) {
+    .header__slider-rus {
+        .header-form {
+            display: none;
+        }
+        .h-dscr {
+            display: block;
+            max-width: 100%;
+            right: 50px;
+            text-align: center;
         }
     }
 }
@@ -332,6 +415,20 @@
     }
     .signUp-wrap {
         position: static;
+    }
+}
+@include breakpoint(768) {
+    .rus-info-items .facts-item {
+        width: 100%;
+    }
+    .rus-info-items .facts-item .f-dscr {
+        height: 100%;
+    }
+}
+
+@include breakpoint(700) {
+    .popup-form-wrapper {
+        width: 100%;
     }
 }
 @include breakpoint(650) {
@@ -407,9 +504,88 @@
         margin-bottom: 20px;
     }
 }
+
+@include breakpoint(550) {
+    .design-intro .btn {
+        width: 100%;
+    }
+    .rus-offer {
+        .par-title {
+            text-align: center;
+        }
+    }
+    .m-dscr {
+        text-align: center;
+        p.dscr {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    .m-info {
+        padding: 0;
+    }
+    .proj-items .btn {
+        width: 350px;
+    }
+    .about-item {
+        padding: {
+            top: 50px;
+            bottom: 50px;
+        }
+    }
+    .about-dscr {
+        height: 100%;
+    }
+    .about-dscr .dj5 {
+        display: block;
+        margin-top: 7px;
+        line-height: normal;
+    }
+    .about-dscr h4.title {
+        font-size: 20px;
+    }
+    .about-dscr p.dscr {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
 @include breakpoint(500) {
     .blog-item {
         width: 100%;
+    }
+}
+@include breakpoint(500) {
+    .popup-title {
+        padding: {
+            right: 20px;
+            left: 20px;
+        }
+        h4 {
+            font-size: 30px;
+        }
+    }
+    .popup-close {
+        right: 20px;
+    }
+}
+@include breakpoint(400) {
+    .popup-title {
+        padding: {
+            right: 10px;
+            left: 10px;
+        }
+        h4 {
+            font-size: 25px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .popup-close {
+        right: 10px;
+    }
+    .proj-items .btn {
+        width: 300px;
     }
 }
 @include breakpoint(375) {
